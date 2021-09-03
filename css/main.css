@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spartan", Arial, Tahoma, sans-serif;
+}
+
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  background: url(/images/bg-pattern-top-mobile.svg) top left no-repeat, url(/images/bg-pattern-bottom-mobile.svg) bottom right no-repeat;
+}
+
+body .container {
+  max-width: 1300px;
+  margin: auto;
+  background-color: --LightGrayishMagenta;
+  margin-block: clamp(5rem, 10vw, 10rem);
+}
+
+body .container .title {
+  color: var(--VeryDarkMagenta);
+  text-align: center;
+  margin-inline: clamp(0.5rem, 10vw, 10rem);
+  margin-bottom: 2rem;
+}
+
+body .container .description {
+  text-align: center;
+  color: var(--DarkGrayishMagenta);
+  margin-bottom: 2rem;
+  margin-inline: clamp(0.5rem, 10vw, 2rem);
+  font-weight: 500;
+}
+
+body .container .rates {
+  margin-bottom: 2rem;
+}
+
+body .container .rates .rate {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 5rem;
+  margin: auto;
+  background-color: rgba(147, 123, 146, 0.2);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+body .container .rates .rate .title {
+  font-weight: bold;
+  margin: 0;
+  margin-top: clamp(0.5rem, 2vw, 1rem);
+}
+
+body .container .rates .rate .stars .star {
+  margin-left: 0.124rem;
+  width: 1.5rem;
+}
+
+body .container .reviews .review {
+  background-color: var(--VeryDarkMagenta);
+  width: 90%;
+  padding: 2rem;
+  min-height: 15rem;
+  border-radius: 0.5rem;
+  margin: 1rem auto 0;
+}
+
+body .container .reviews .review .buyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+body .container .reviews .review .buyer .avatar {
+  border-radius: 50%;
+  width: 3.5rem;
+}
+
+body .container .reviews .review .buyer .info .name {
+  color: var(--White);
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+body .container .reviews .review .buyer .info .role {
+  color: var(--SoftPink);
+  font-weight: 500;
+}
+
+body .container .reviews .review .review-quote {
+  color: var(--White);
+}
+
+@media screen and (min-width: 700px) {
+  .rates,
+  .reviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background: url(/images/bg-pattern-top-desktop.svg) top left no-repeat, url(/images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+  }
+}
+
+@media screen and (min-width: 1232px) {
+  body .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body .container .reviews {
+    grid-column: span 2;
+  }
+  body .container .reviews .review:nth-child(2) {
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  body .container .reviews .review:last-child {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  body .container .rates .rate {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1rem;
+  }
+  body .container .rates .rate .title {
+    margin-top: 0;
+  }
+  body .container .rates .rate:last-child {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+  body .container .rates .rate:nth-child(2) {
+    -webkit-transform: translateX(1.5rem);
+            transform: translateX(1.5rem);
+  }
+  body .container header > .title {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
